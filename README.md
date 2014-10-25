@@ -2,17 +2,15 @@
 Swiftp
 ===
 
-
 android swiftp server客户端。
 
-
-注意事项：
+说明：
 ===
-1. 调试开关：
+* 调试开关：
 
 源码default.java中，public static final boolean release = true;//可以改成false打开log的开关，方便调试。
 
-2. 通过USB进行ftp传输
+* 通过USB进行ftp传输
 
 大家知道，ftp需要两个端口，分别用于命令传输和文件传输。通过代码定制，可以达到usb ftp传输，简单实现类似豌豆荚pc客户端文件管理的功能。
 	
