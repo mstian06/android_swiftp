@@ -16,6 +16,7 @@ android swiftp server客户端。
 	
 定制代码NormalDataSocketFactory.java
 
+```Java
 	public int onPasv() {
 		clearState();
 		try {
@@ -29,6 +30,7 @@ android swiftp server客户端。
 			return 0;
 		}
 	}
+```
 在new ServerSocket(2221, Defaults.tcpConnectionBacklog)，选择可用的数据传输端口（例如2221）；除此之外，pc端还需要进行端口转换。
 
 以windows为例，在手机上启动并开启swiftp server之后，pc ftp clent设置server的主机地址为环回地址（127.0.0.1），执行`adb forward tcp:2121 tcp:2121`和`adb forward tcp:2221 tcp:2221`进行端口转换，这样保证clent请求的命令发向android的swiftp server端。
